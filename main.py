@@ -28,22 +28,24 @@ Scissors'''
 #Rock, Paper, Scisors Game
 import random
 choose = int(input("What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissors. "))
-comp_random = random.randint(0,2)
-my_list = [rock_0, paper_1, scissors_2]
-if choose >= 3 and choose < 0:
+
+
+if choose >= 3 or choose < 0:
   print("You entered an invalid number")
 else:  
-print(my_list[int(choose)])
-print("")
-print("Computer choose:")
-print(my_list[comp_random])
+  comp_random = random.randint(0,2)
+  my_list = [rock_0, paper_1, scissors_2]
+  print(my_list[int(choose)])
+  print("")
+  print("Computer choose:")
+  print(my_list[comp_random])
 
-if choose == 0 and comp_random  == 2:
-    print("you win") 
-elif choose == 1 and comp_random == 0:
-    print("you win")
-elif choose == 2 and comp_random == 1:
-    print("you win") 
-else:
-  print("you loose")    
+  if choose == 0 and comp_random  == 2:
+      print("you win") 
+  elif choose == 1 and comp_random == 0:
+      print("you win")
+  elif choose == 2 and comp_random == 1:
+      print("you win") 
+  else:
+    print("you loose")    
 
